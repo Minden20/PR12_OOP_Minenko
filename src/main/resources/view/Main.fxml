@@ -1,0 +1,41 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ui.MainControler">
+   <top>
+      <VBox spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" spacing="10.0" style="-fx-padding: 10;">
+               <children>
+                  <Button fx:id="getbuttonid" mnemonicParsing="false" onAction="#onEdit" text="Reload Data" />
+                  <Button fx:id="addbuttonid" mnemonicParsing="false" onAction="#onAdd" text="Add Dummy" />
+                  <TextField fx:id="searchField" promptText="Search name or email..." HBox.hgrow="ALWAYS" />
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" text="Search" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-padding: 0 10 10 10;">
+               <children>
+                  <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0" visible="false" />
+                  <Label fx:id="statusLabel" text="Ready" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TableView fx:id="tableviewid" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="50.0" text="ID" />
+          <TableColumn fx:id="imageCol" prefWidth="80.0" text="Image" />
+          <TableColumn fx:id="nameCol" prefWidth="150.0" text="Name" />
+          <TableColumn fx:id="emailCol" prefWidth="200.0" text="Email" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
