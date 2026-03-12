@@ -15,7 +15,7 @@
                <children>
                   <Button fx:id="getbuttonid" mnemonicParsing="false" onAction="#onEdit" text="Reload Data" />
                   <Button fx:id="addbuttonid" mnemonicParsing="false" onAction="#onAdd" text="Add Dummy" />
-                  <Button fx:id="addManualbuttonid" mnemonicParsing="false" onAction="#onAddManual" text="Додати" />
+                  <Button fx:id="addManualbuttonid" mnemonicParsing="false" onAction="#onAddManual" text="Add" />
                   <TextField fx:id="searchField" promptText="Search name or email..." HBox.hgrow="ALWAYS" />
                   <Button fx:id="searchButton" mnemonicParsing="false" onAction="#onSearch" text="Search" />
                </children>
